@@ -2,7 +2,7 @@ package Array;
 
 import java.util.Scanner;
 
-public class intToArray {
+public class introToArray {
     public static void main(String[] args) {
         // Creating an Array
         int num[]=new int [3];
