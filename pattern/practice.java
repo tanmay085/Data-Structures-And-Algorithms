@@ -127,12 +127,11 @@ public class practice {
 
     }
     public static void main(String args[]) {
-        hashmap<String, Integer> map = new hashmap<>();
-        map.put("India", 190);
-        map.put("China", 200);
-        map.put("US", 50);
-        // map.remove("India");
-        System.out.println("China: " + map.get("China"));
+        int n=5;
+        for(int i =0;i<=n;i++){
+           System.out.print(" ".repeat(n - i - 1));
+           System.out.println("*".repeat(2 * i + 1));
+        }
     }
     
 }
