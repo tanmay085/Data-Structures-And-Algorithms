@@ -2,7 +2,7 @@ package Array;
 
 import java.util.Scanner;
 
-public class searchValueInArray {
+public class SearchValueInArray {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         System.out.print("Enter value need to search: ");
