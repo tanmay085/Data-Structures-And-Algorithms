@@ -3,6 +3,7 @@ package String;
 import java.util.Scanner;
 
 public class CumulativeLength {
+    
     public static void main(String []args){
 
         Scanner sc= new Scanner(System.in);
@@ -17,7 +18,7 @@ public class CumulativeLength {
         }
         System.out.println(toLength);
 
-
     }
     
+   
 }
