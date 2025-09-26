@@ -1,4 +1,5 @@
 package String;
+import java.util.*;
 
 public class ReplaceIToE {
     public void usingStringBuilder(){
@@ -12,19 +13,19 @@ public class ReplaceIToE {
     }
     public static void main(String[] args) {
         
-        // Scanner sc=new Scanner(System.in);
-        // String name=sc.nextLine();
-        // String result="";
+        Scanner sc=new Scanner(System.in);
+        String name=sc.nextLine();
+        String result="";
 
-        // for(int i=0;i<name.length();i++){
-        //     if(name.charAt(i)=='i'){
-        //         result+="e";
+        for(int i=0;i<name.length();i++){
+            if(name.charAt(i)=='i'){
+                result+="e";
 
-        //     }else{
-        //         result+=name.charAt(i);
-        //     }
-        // }
-        // System.out.println(result);
+            }else{
+                result+=name.charAt(i);
+            }
+        }
+        System.out.println(result);
         ReplaceIToE rt=new ReplaceIToE();
         rt.usingStringBuilder();
 
