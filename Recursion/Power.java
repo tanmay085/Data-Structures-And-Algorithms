@@ -6,12 +6,11 @@ public class Power {
         if(x==0){
             return 0;
         }
-        int xPower=calPower(x, n-1);
-        int power=x*xPower;
-        return power;
+      
+        return x*calPower(x, n-1);
     }
     public static void main(String[] args) {
-        int ans= calPower(3, 4);
+        int ans= calPower(3, 3);
         System.out.println(ans);
         
     }

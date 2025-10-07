@@ -1,16 +1,14 @@
 public class SumOfN {
-    public void printSumN(int n,int add){
+    public static int printSumN(int n){
         if(n==0){
-            System.out.println(add);
-            return;
+            return 0;
         }
-        add+=n;
-        printSumN(n-1, add);
+        
+        return n+printSumN(n-1);
     }
     public static void main(String[]args){
-        SumOfN sum=new SumOfN();
-        int add=0;
-        sum.printSumN(5,add);
+       int ans= printSumN(5);
+       System.out.print(ans);
     }
     
 }
