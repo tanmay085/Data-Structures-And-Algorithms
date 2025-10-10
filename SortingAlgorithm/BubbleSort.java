@@ -1,34 +1,44 @@
-package SortingAlgorithm;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class BubbleSort {
-    public int[] bubble(int[]arr){
-        int size=arr.length;
-        for(int i=0;i<size;i++){
-            for(int j=0;j<size-i-1;j++){
-                if(arr[j]>arr[j+1]){
-                    int temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
+
+    public static void recursionBubble(int []num,int n, int j){
+        if(n==1){
+            return;
+        }
+        if(j==n-1){
+            recursionBubble(num, n-1, 0);
+            return;
+        }
+        
+            if(num[j]>num[j+1]){
+                int temp=num[j+1];
+                num[j+1]=num[j];
+                num[j]=temp;
+            }
+       
+        recursionBubble(num, n, j+1);
+    }
+
+    public static void main(String[] args) {
+        int []num={2,1,4,3};
+        for(int i=0;i<num.length;i++){
+            for(int j=0;j<num.length-i-1;j++){
+                if(num[j]>num[j+1]){
+                    int temp=num[j+1];
+                    num[j+1]=num[j];
+                    num[j]=temp;
                 }
             }
         }
-        return arr;
-        
-    }
-    public static void main (String[]args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the size of array: ");
-        int s=sc.nextInt();
-        int [] number=new int[s];
-        for(int i=0;i<number.length;i++){
-            number[i]=sc.nextInt();
+        for(int i=0;i<num.length;i++){
+            System.out.print(num[i]);
         }
-        
-        BubbleSort bubbleSort=new BubbleSort();
-        int [] sorted=bubbleSort.bubble(number);
-        for(int i=0;i<sorted.length;i++){
-            System.out.print(sorted[i]);
-        }
+       
+        recursionBubble(num, num.length, 0);
+        System.out.print(Arrays.toString(num));
+       
     }
+
+
 }

@@ -1,27 +1,21 @@
-// package SortingAlgorithm;
 public class SelectionSort {
-    public static void slection(int []arr){
-        int size=arr.length;
-        for(int i=0;i<size;i++){
-            int small=i;
-            for(int j=i+1;j<size;j++){
-                if(arr[small]>arr[j])
+   
+   public static void main(String[] args) {
+       int []num={2,3,1,4};
+       for(int i=0;i<num.length;i++){
+        int small=i;
+        for(int j=i+1;j<num.length;j++){
+            if(num[j]<num[small]){
                 small=j;
             }
-            int temp=arr[i];
-            arr[i]=arr[small];
-            arr[small]=temp;
         }
-        for (int i=0;i<size;i++){
-            System.out.print(arr[i]+" ");
-        }
-    }
-    public static void main(String []args){
-        int []number={4,1,6,2,7};
-        SelectionSort selectionSort=new SelectionSort();
-        selectionSort.slection(number);
-
-
-    }
+        int temp=num[small];
+        num[small]=num[i];
+        num[i]=temp;
+       }
+       for(int i=0; i<num.length;i++){
+        System.out.print(num[i]);
+       }
+   }
     
 }

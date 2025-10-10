@@ -5,7 +5,7 @@ public class SubSquences {
              return;
         }
         char currentChar=word.charAt(idx);
-        sequenceSub(word, idx+1, newString+currentChar);
+         sequenceSub(word, idx+1, newString+currentChar);
         sequenceSub(word, idx+1, newString);
     }
     public static void main(String[] args) {
