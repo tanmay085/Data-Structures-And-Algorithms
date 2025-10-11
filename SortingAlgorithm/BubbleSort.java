@@ -2,13 +2,13 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    public static void recursionBubble(int []num,int n, int j){
+    public static int [] recursionBubble(int []num,int n, int j){
         if(n==1){
-            return;
+            return num;
         }
         if(j==n-1){
-            recursionBubble(num, n-1, 0);
-            return;
+            return recursionBubble(num, n-1, 0);
+            
         }
         
             if(num[j]>num[j+1]){
@@ -17,7 +17,7 @@ public class BubbleSort {
                 num[j]=temp;
             }
        
-        recursionBubble(num, n, j+1);
+        return  recursionBubble(num, n, j+1);
     }
 
     public static void main(String[] args) {
