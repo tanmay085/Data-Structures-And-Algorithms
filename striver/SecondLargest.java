@@ -1,32 +1,31 @@
 public class SecondLargest {
     public static void main(String[] args) {
-            int arr[]={8, 8, 7, 6, 5};
-            int largest=arr[0];
-            int secondLargest=Integer.MIN_VALUE;
-            boolean same=false;
-            for(int i=1; i<arr.length;i++){
-                if(arr[0]==arr[i]){
-                    same=true;
-                }else{
-                    same=false;
-                    break;
+        int []arr={8,8,8,8};
+            
+            int large=Integer.MIN_VALUE;
+            int secoundLarge=Integer.MIN_VALUE;
+            for(int x:arr){
+                if(x>large){
+                    secoundLarge=large;
+                    large=x;
+                }else if(x>secoundLarge && x<large ){
+                    secoundLarge=x;
                 }
+                    
+               
             }
-            for(int i=1;i<arr.length-1;i++){
-                if(largest<arr[i]){
-                    secondLargest=largest;
-                    largest=arr[i];
-                }
-                
-            }
-            if(same){
+            if(secoundLarge==Integer.MIN_VALUE){
                 System.out.print("-1");
             }else{
-                System.out.print(secondLargest);
+                System.out.print(secoundLarge);
             }
             
+
             
             
     }
     
 }
+
+//Time complexity
+//0(n)
